@@ -1,0 +1,31 @@
+Test Scenarios:
+
+Scenario 1:
+Input: Number of nights = 5, 
+Room type = BR001 (Standard room)
+Expected Output: Total cost = $100 * 5 * 0.9 = $450 (10% discount for 3 or more consecutive nights)
+
+Scenario 2:
+Input: Number of nights = 10, 
+Room type = BR002 (Deluxe room)
+Expected Output: Total cost = $150 * 10 * 0.85 = $1275 (15% discount for 7 or more consecutive nights)
+
+Scenario 3:
+Input: Number of nights = 2, 
+Room type = BR003 (Suite)
+Expected Output: Total cost = $200 * 2 = $400 (No discount for bookings of fewer than 3 nights)
+
+Scenario 4:
+Input: Number of nights = 31, 
+Room type = BR001 (Standard room)
+Expected Output: System displays an error message (FR002) as the maximum number of nights allowed is 30.
+
+Scenario 5:
+Input: Number of nights = 5, 
+Room type = BR004 (Invalid room type)
+Expected Output: System displays an error message (FR001) as the user entered an invalid room type.
+
+Scenario 6:
+Input: Number of nights = "abc", 
+Room type = BR002 (Deluxe room)
+Expected Output: System displays an error message (TR001) as the user entered a non-numeric value for the number of nights.

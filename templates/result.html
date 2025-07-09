@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Booking Result</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Booking Result</h2>
+        {% if total_cost is defined %}
+            <div class="alert alert-success">
+                <p>Total cost for your booking: ${{ total_cost }}</p>
+            </div>
+        {% else %}
+            <div class="alert alert-danger">
+                <p>An error occurred while processing your request. Please try again.</p>
+            </div>
+        {% endif %}
+        <a href="/" class="btn btn-primary">Go Back</a>
+    </div>
+</body>
+</html>

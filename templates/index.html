@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <title>Hotel Booking System</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <h2>Hotel Room Booking System</h2>
+        <form method="post">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+                {% if messages %}
+                    {% for category, message in messages %}
+                        <div class="alert alert-{{ category }}">
+                            {{ message }}
+                        </div>
+                    {% endfor %}
+                {% endif %}
+            {% endwith %}
+            <div class="form-group">
+                <label for="room_type">Room Type:</label>
+                <select class="form-control" id="room_type" name="room_type">
+                    <option value="BR001">Standard Room </option>
+                    <option value="BR002">Deluxe Room </option>
+                    <option value="BR003">Suite </option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="num_nights">Number of Nights:</label>
+                <input type="text" class="form-control" id="num_nights" name="num_nights">
+            </div>
+            <button type="submit" class="btn btn-primary">Calculate Cost</button>
+        </form>
+    </div>
+</body>
+</html>
